@@ -10,7 +10,7 @@ int main(){
 	binB = std::bitset<32>(b).to_string();
 	
 	for(int i = 0;i < binA.length();i++){
-		result += binA.at(i)^binB.at(i) ? "0" : "1";
+		result += binA.at(i) == binB.at(i) ? "0" : "1";
 	}
 	
 	printf("%ld\n", std::bitset<32>(result).to_ulong());
